@@ -1,0 +1,91 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bronstein et~al.(2017)Bronstein, Bruna, LeCun, Szlam, and
+  Vandergheynst]{bronstein2017geometric}
+Michael~M Bronstein, Joan Bruna, Yann LeCun, Arthur Szlam, and Pierre
+  Vandergheynst.
+\newblock Geometric deep learning: going beyond euclidean data.
+\newblock \emph{IEEE Signal Processing Magazine}, 34\penalty0 (4):\penalty0
+  18--42, 2017.
+
+\bibitem[Carlsson(2009)]{carlsson2009topology}
+Gunnar Carlsson.
+\newblock Topology and data.
+\newblock \emph{Bulletin of the American Mathematical Society}, 46\penalty0
+  (2):\penalty0 255--308, 2009.
+
+\bibitem[Carlsson et~al.(2008)Carlsson, Ishkhanov, De~Silva, and
+  Zomorodian]{carlsson2008local}
+Gunnar Carlsson, Tigran Ishkhanov, Vin De~Silva, and Afra Zomorodian.
+\newblock On the local behavior of spaces of natural images.
+\newblock \emph{International journal of computer vision}, 76\penalty0
+  (1):\penalty0 1--12, 2008.
+
+\bibitem[Chazal and Michel(2017)]{chazal2017introduction}
+Fr{\'e}d{\'e}ric Chazal and Bertrand Michel.
+\newblock An introduction to topological data analysis: fundamental and
+  practical aspects for data scientists.
+\newblock \emph{arXiv preprint arXiv:1710.04019}, 2017.
+
+\bibitem[Edelsbrunner and Harer(2008)]{edelsbrunner2008persistent}
+Herbert Edelsbrunner and John Harer.
+\newblock Persistent homology-a survey.
+\newblock \emph{Contemporary mathematics}, 453:\penalty0 257--282, 2008.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton]{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock \emph{Advances in neural information processing systems},
+  25:\penalty0 1097--1105, 2012.
+
+\bibitem[Liew et~al.(2016)Liew, Khalil-Hani, and Bakhteri]{liew2016bounded}
+Shan~Sung Liew, Mohamed Khalil-Hani, and Rabia Bakhteri.
+\newblock Bounded activation functions for enhanced training stability of deep
+  neural networks on visual pattern recognition problems.
+\newblock \emph{Neurocomputing}, 216:\penalty0 718--734, 2016.
+
+\bibitem[Luo et~al.(2017)Luo, Wu, and Lin]{Luo_2017_ICCV}
+Jian-Hao Luo, Jianxin Wu, and Weiyao Lin.
+\newblock Thinet: A filter level pruning method for deep neural network
+  compression.
+\newblock In \emph{Proceedings of the IEEE International Conference on Computer
+  Vision (ICCV)}, Oct 2017.
+
+\bibitem[Naitzat et~al.(2020)Naitzat, Zhitnikov, and Lim]{naitzat2020topology}
+Gregory Naitzat, Andrey Zhitnikov, and Lek-Heng Lim.
+\newblock Topology of deep neural networks.
+\newblock \emph{Journal of Machine Learning Research}, 21\penalty0
+  (184):\penalty0 1--40, 2020.
+
+\bibitem[Ramachandran et~al.(2017)Ramachandran, Zoph, and
+  Le]{ramachandran2017searching}
+Prajit Ramachandran, Barret Zoph, and Quoc~V Le.
+\newblock Searching for activation functions.
+\newblock \emph{arXiv preprint arXiv:1710.05941}, 2017.
+
+\bibitem[Saucan et~al.(2007)Saucan, Appleboim, and Zeevi]{saucan2007geometric}
+Emil Saucan, Eli Appleboim, and Yehoshua~Y Zeevi.
+\newblock Geometric sampling of manifolds for image representation and
+  processing.
+\newblock In \emph{International Conference on Scale Space and Variational
+  Methods in Computer Vision}, pages 907--918. Springer, 2007.
+
+\bibitem[Smith et~al.(2021)Smith, D{\l}otko, and Zavala]{smith2021topological}
+Alexander~D Smith, Pawe{\l} D{\l}otko, and Victor~M Zavala.
+\newblock Topological data analysis: concepts, computation, and applications in
+  chemical engineering.
+\newblock \emph{Computers \& Chemical Engineering}, 146:\penalty0 107202, 2021.
+
+\bibitem[Xiao et~al.(2017)Xiao, Rasul, and Vollgraf]{xiao2017fashion}
+Han Xiao, Kashif Rasul, and Roland Vollgraf.
+\newblock Fashion-mnist: a novel image dataset for benchmarking machine
+  learning algorithms (2017).
+\newblock \emph{arXiv preprint cs.LG/1708.07747}, 32, 2017.
+
+\end{thebibliography}
