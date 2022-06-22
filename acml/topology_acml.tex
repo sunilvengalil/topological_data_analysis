@@ -112,7 +112,7 @@ In addition to the above insight, that the activation function should be non-hom
 
 Based on the above two  hypotheses, we introduce a new parameterized family of activation functions with multiple \textbf{many-to-one} regions and \textbf{multiple} discontinuities.
 
-Results of our experiments show that, with the proposed activation function, the network converges faster as compared to commonly used activation functions like ReLU and sigmoid. It is also observed that the Betti numbers, computed using persistent homology \cite{naitzat2020topology}, reduce faster with the proposed activation function.
+Results of our experiments show that, with the proposed activation function, the network converges faster as compared to commonly used activation functions like ReLU. It is also observed that the Betti numbers, computed using persistent homology \cite{naitzat2020topology}, reduce faster with the proposed activation function.
 
 The main contribution of this paper is to provide new guidelines for designing  activation functions for supervised classification tasks. We illustrate the guideline by proposing a new family of activation functions.
 
@@ -175,7 +175,7 @@ Sample images from each of the above datasets are shown in Figures \ref{fig:catd
 \end{figure}
 
 \subsection{Layer Transfer Function}
-The layer transfer function is composed of an affine transformation and a non-linear activation function. The generic form of layer transfer function in MLP and CNN is given in Equations \ref{eq:1} and \ref{eq:2} below.
+The layer transfer function is composed of an affine transformation and a non-linear activation function. The generic form of the layer transfer function in MLP and CNN is given in Equations \ref{eq:1} and \ref{eq:2} below.
 
 \begin{equation} \label{eq:1}
   X^{l + 1} = f(W^TX^{l} + b)
@@ -202,7 +202,7 @@ b &= \text{Bias }
 
 In the subsections below, we provide the details of desired characteristics for activation function from a topological point of view.
 
-\subsection{Significance of Betti numbers on  layer transfer function}
+\subsection{Significance of Betti numbers on classification}
 Betti numbers, denoted as $\beta_k(X)$,   are used to quantify the topological complexity of a $d$-dimensional topological space  $X$, where  $0 \leq k \leq d-1$. The  $0^{th}$ Betty number, $\beta_0(X)$, is the number of connected components, the first Betti number, $\beta_1(X)$, is the number of one dimensional holes, the second Betti number, $\beta_2(X)$, is the number of two dimensional holes and so on. Figure \ref{fig:bett_numbers_illustration} shows some topological spaces and their corresponding Betti numbers.
 
 \begin{figure}[htp]
@@ -218,7 +218,7 @@ For efficient classification, one needs to transform the original point data clo
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{images/topological_simplication_layer_by_layer.png}
-\caption{Simplification of topological space as the data is transformed by successive layers of neural network.
+\caption{Simplification of topological space as the data is transformed by successive layers of neural network. The input data (leftmost) has a complex topology with samples from Red and Green classes interlocked together and contains holes. As the data is transformed by successive layers of the classification network, samples from the two classes get disconnected to form multiple connected components. Each connected component has samples from the same class. Transformation by further layers joins different connected components of samples from the same class into one single connected component and  removes the holes from each connected component. The final transformed space has two connected components one for each class (right most).
 }\label{fig:topological_simplication_layer_by_layer}
 \end{center}
 \end{figure}
@@ -228,7 +228,7 @@ It is observed that non-homeomorphic activation functions like ReLU reduce the B
 
 \begin{figure}[htp]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{images/activation_function_design.png}
+\includegraphics[width=\textwidth]{images/activation_function_design.png}
 \caption{Steps in design of many-to-one activation functions. We start with a single half cycle of a sinusoidal function an decide a cutoff-point $\frac{3\pi}{4}$ and repeat the function in the interval $[0,\frac{3\pi}{4}]$ to get the final activation function.}
 \label{fig:activation_function_design}
 \end{center}
@@ -241,33 +241,33 @@ y = ksin(\frac{3\pi}{4})   + sin(x - \frac{3\pi}{4})
  where $k=\left \lfloor{\frac{x}{\frac{3\pi}{4}}}\right \rfloor$
 
 \subsection{Neural Network Architecture}
-We performed experiments using MLP  on nine-sphere and nine-rings datasets. For image datasets, we used Convolutional Neural Networks for running the experiments. The MLP for simulated dataset consists of 9 layers with 25 neurons in each layer. We performed experiments with LeakyReLU and the proposed activation function. Our empirical results show that the proposed activation function results in faster training convergence compared to LeakyRelu.
+We performed experiments using MLP  on nine-sphere and nine-rings datasets. For image datasets, we used Convolutional Neural Networks for running the experiments. The MLP for simulated dataset consists of 9 layers with 25 neurons in each layer. We performed experiments with Leaky ReLU and the proposed activation function. Our empirical results show that the proposed activation function results in faster training convergence compared to Leaky ReLU.
 
 \section{Results and Discussion}
 
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{images/cifar_10_arch.drawio}
-\caption{Architecture of CNN for classifying images in CIFAR-10 dataset along with the comparison  of progression of first Betti number (Number of connected components) of samples from a single class across the layers using ReLU  and proposed activation function. First row of the table shows Betti numbers using LeakyReLU. Second row shows the Betti numbers with the proposed activation function added in layer Conv 2. It is observed that Betti number reduce significantly in layer Conv 2.
+\caption{Architecture of CNN for classifying images in CIFAR-10 dataset along with the comparison  of progression of first Betti number (Number of connected components) of samples from a single class across the layers using Leaky ReLU  and proposed activation function. First row of the table shows Betti numbers using Leaky ReLU. Second row shows the Betti numbers with the proposed activation function added in layer Conv 2. It is observed that Betti number reduce significantly in layer Conv 2.
 }
 \label{fig:cifar_10_arch}
 \end{center}
 \end{figure}
 
 
-Figure \ref{fig:cifar_10_arch} shows  comparison of progression of first Betti numbers (number of connected components) as the data is trasnformed across layers when Leaky ReLU is is used in all the layers Vs the proposed activation function is used is the final convolutional layer.  It is observed, from Figures \ref{fig:cifar_10_arch},  that with the proposed activation function Betti numbers decrease  by a significantly larger amount than ReLU activation function. Figure \ref{fig:training_convergence} shows the comparison of convergence  of multi layer perceptron with ReLU and proposed activation function using nine-sphere and nine-ring datasets. As evident from this figure, the reduction in Betti numbers  directly translates to faster training convergence. The new activation functions with multiple many-to-one regions seem to work well on various datasets and help in achieving at-par or better trainability.
+Figure \ref{fig:cifar_10_arch} shows  comparison of progression of first Betti numbers (number of connected components) as the data is transformed across layers when Leaky ReLU is is used in all the layers Vs the proposed activation function is used is the final convolutional layer.  It is observed, from Figures \ref{fig:cifar_10_arch},  that with the proposed activation function Betti numbers decrease  by a significantly larger amount than Leaky ReLU activation function. Figure \ref{fig:training_convergence} shows the comparison of convergence  of multi layer perceptron with Leaky ReLU and proposed activation function using nine-sphere and nine-ring datasets. As evident from this figure, the reduction in Betti numbers  directly translates to faster training convergence. The new activation functions with multiple many-to-one regions seem to work well on various datasets and help in achieving at-par or better trainability.
 
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{images/training_convergence.png}
-\caption{Architecture of CNN for classifying images in CIFAR-10 dataset along with the comparison  of progression of first Betti number (Number of connected components) of samples from a single class across the layers using ReLU  and proposed activation function. First row of the table shows Betti numbers using LeakyReLU. Second row shows the Betti numbers with the proposed activation function added in layer Conv 2. It is observed that Betti number reduce significantly in layer Conv 2.}
+\caption{Comparison of training convergence using proposed activation function and Leaky ReLU activation function. It is observed that convergence is faster with the proposed activation function.}
 \label{fig:training_convergence}
 \end{center}
 \end{figure}
 
 Also, The performance impact becomes more pronounced at larger batch-sizes i.e. with larger batch-sizes the gain tends to reach a factor of 2. On increasing the batch size the training for even simpler datasets takes longer (more epochs) for legacy activation functions. Even though the increase in training epochs  is seen for the proposed activation function also, the increase is less pronounced.
 
-We further observed that,  in contrast to legacy activation functions like LeakyRelu,  the need to adjust learning rate seems to be little.
+We further observed that,  in contrast to legacy activation functions like Leaky ReLU,  the need to adjust learning rate seems to be little.
 
 \section{Conclusion}
 In this work, we look at topological complexity of data at the output of each layer of deep neural network for binary classification tasks. We propose a new activation function that simplifies the topological complexity of point cloud data (measured using Betti numbers)  at each hidden layer which translates to faster training convergence. We evaluate the proposed methods on popular image classification datasets and our results show 1) the proposed activation function results in faster training convergence and 2) removing hidden channels with large Betti numbers does not reduce the test accuracy which indicates that these feature maps are insignificant and can be removed.
