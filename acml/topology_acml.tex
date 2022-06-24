@@ -26,51 +26,51 @@
 
 \newcommand{\cs}[1]{\texttt{\char`\\#1}}
 \makeatletter
-\let\Ginclude@graphics\@org@Ginclude@graphics 
+\let\Ginclude@graphics\@org@Ginclude@graphics
 \makeatother
 
 \jmlrvolume{}
 \jmlryear{2022}
 \jmlrworkshop{ACML 2022}
 
-\title[Topological Framework for Activation function in DNN]{Design of Activation Function Using Topological Framework  in Deep Neural Networks}
+\title[Topological Framework for new activation function  design DNN]{Design of Activation Function Using Topological Framework  in Deep Neural Networks}
 
- % Use \Name{Author Name} to specify the name.
- % If the surname contains spaces, enclose the surname
- % in braces, e.g. \Name{John {Smith Jones}} similarly
- % if the name has a "von" part, e.g \Name{Jane {de Winter}}.
- % If the first letter in the forenames is a diacritic
- % enclose the diacritic in braces, e.g. \Name{{\'E}louise Smith}
+% Use \Name{Author Name} to specify the name.
+% If the surname contains spaces, enclose the surname
+% in braces, e.g. \Name{John {Smith Jones}} similarly
+% if the name has a "von" part, e.g \Name{Jane {de Winter}}.
+% If the first letter in the forenames is a diacritic
+% enclose the diacritic in braces, e.g. \Name{{\'E}louise Smith}
 
- % Two authors with the same address
- % \author{\Name{Author Name1} \Email{abc@sample.com}\and
- %  \Name{Author Name2} \Email{xyz@sample.com}\\
- %  \addr Address}
+% Two authors with the same address
+% \author{\Name{Author Name1} \Email{abc@sample.com}\and
+%  \Name{Author Name2} \Email{xyz@sample.com}\\
+%  \addr Address}
 
- % Three or more authors with the same address:
- % \author{\Name{Author Name1} \Email{an1@sample.com}\\
- %  \Name{Author Name2} \Email{an2@sample.com}\\
- %  \Name{Author Name3} \Email{an3@sample.com}\\
- %  \Name{Author Name4} \Email{an4@sample.com}\\
- %  \Name{Author Name5} \Email{an5@sample.com}\\
- %  \Name{Author Name6} \Email{an6@sample.com}\\
- %  \Name{Author Name7} \Email{an7@sample.com}\\
- %  \Name{Author Name8} \Email{an8@sample.com}\\
- %  \Name{Author Name9} \Email{an9@sample.com}\\
- %  \Name{Author Name10} \Email{an10@sample.com}\\
- %  \Name{Author Name11} \Email{an11@sample.com}\\
- %  \Name{Author Name12} \Email{an12@sample.com}\\
- %  \Name{Author Name13} \Email{an13@sample.com}\\
- %  \Name{Author Name14} \Email{an14@sample.com}\\
- %  \addr Address}
+% Three or more authors with the same address:
+% \author{\Name{Author Name1} \Email{an1@sample.com}\\
+%  \Name{Author Name2} \Email{an2@sample.com}\\
+%  \Name{Author Name3} \Email{an3@sample.com}\\
+%  \Name{Author Name4} \Email{an4@sample.com}\\
+%  \Name{Author Name5} \Email{an5@sample.com}\\
+%  \Name{Author Name6} \Email{an6@sample.com}\\
+%  \Name{Author Name7} \Email{an7@sample.com}\\
+%  \Name{Author Name8} \Email{an8@sample.com}\\
+%  \Name{Author Name9} \Email{an9@sample.com}\\
+%  \Name{Author Name10} \Email{an10@sample.com}\\
+%  \Name{Author Name11} \Email{an11@sample.com}\\
+%  \Name{Author Name12} \Email{an12@sample.com}\\
+%  \Name{Author Name13} \Email{an13@sample.com}\\
+%  \Name{Author Name14} \Email{an14@sample.com}\\
+%  \addr Address}
 
- % Authors with different addresses:
-  \author{\Name{Author Name1} \Email{abc@sample.com}\\
-  \addr Address 1
-  \AND
-  \Name{Author Name2} \Email{xyz@sample.com}\\
-  \addr Address 2
- }
+% Authors with different addresses:
+%  \author{\Name{Author Name1} \Email{abc@sample.com}\\
+%  \addr Address 1
+%  \AND
+%  \Name{Author Name2} \Email{xyz@sample.com}\\
+%  \addr Address 2
+% }
 
 \editors{Emtiyaz Khan and Mehmet Gonen}
 
@@ -79,7 +79,7 @@
 \maketitle
 
 \begin{abstract}
-Success of deep neural networks in diverse tasks across domains of computer vision, speech recognition and natural language processing, has necessitated understanding the dynamics of training process and also working of trained models. For classification tasks, one of the main requirements of the layer transfer function is to transform data such that only information required for classification is preserved and all other information is discarded.  Further the data should be transformed such that samples belonging to a single class should come closer in the transformed space which will help in drawing a clear decision boundary across classes. This enforces the need for topological simplification of the point cloud data set formed using samples from each class. We analyze the topological transformation of the space of training samples as it gets transformed by each successive layer during training, by changing the activation function. The impact of changing activation function on the convergence during training is reported for the task of binary classification.  A novel activation function aimed at faster convergence for classification tasks is proposed.  Here, Betti numbers are used to quantify topological complexity of data. Results of experiments on popular synthetic binary classification datasets with large Betti numbers (>150) using MLPs are reported. Results show that the proposed activation function results in faster convergence requiring fewer epochs by a factor of 1.5  to 2, since Betti numbers reduce faster across layers with the proposed activation function. The proposed methodology was verified on benchmark image datasets: fashion MNIST, CIFAR-10 and cat-vs-dog images, using CNNs.
+Success of deep neural networks in diverse tasks across domains of computer vision, speech recognition and natural language processing, has necessitated understanding the dynamics of training process and analysis of trained models. For classification tasks, one of the main requirements of the layer transfer function is to transform data such that only information required for classification is preserved and all other information is discarded.  Further, the data should be transformed such that samples belonging to a single class should come closer in the transformed space which will help in drawing a clear decision boundary across classes. This enforces the need for topological simplification of the point cloud data set formed using samples from each class. We analyze the impact of the activation function on the topological transformation of the space of training samples as it gets transformed by each successive layer during training. For the task of binary classification, the impact of various activation functions on the convergence during training is studied.  In this work, the afore-mentioned convergence is considered as the criterion for the design of a novel activation function, aimed at faster convergence for binary classification task.  Here, Betti numbers are used to quantify topological complexity of data. Results of experiments on synthetic binary classification datasets with large Betti numbers ($>150$) using Multi Layer Perceptron(MLP) are reported. Results show that the proposed novel activation function results in faster convergence requiring fewer epochs by a factor of 1.5  to 2 as compared to the popularly used activation function Leaky ReLU. Faster convergence occurred because Betti numbers reduce faster across layers with the proposed activation function. The proposed methodology is verified on benchmark image datasets: fashion MNIST, CIFAR-10 and cat-vs-dog images, using CNN.
 \end{abstract}
 \begin{keywords}
 Training Convergence; Activation function; Topological Data Analysis; Betti Numbers
@@ -127,6 +127,14 @@ Since the introduction of ReLU activation function in \cite{alexnet} as an alter
 
 Our work differs from all of these as we are using topological simplification as a basis for deriving new activation.  We propose that an activation function with many-to-one regions can reduce topological complexity of data and hence can result in faster training convergence.
 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{images/nine_ring_and_nine_sphere.png}
+\caption{3-dimensional synthetic datasets with two different classes(Red and Green) used for training MLP. \\ \footnotesize{Source: https://arxiv.org/abs/2004.06093}}
+  \label{fig:nine_ring_and_nine_sphere}
+\end{center}
+\end{figure}
+
 \section{Proposed Method}
 \subsection{Problem Formulation}
 We restrict our analysis to the task of supervised classification of  1) 3-dimensional synthetic datasets using Multi Layer Perceptron(MLP) and 2) images using Convolutional Neural Network. The classification task can be viewed as a many-to-one mapping, $f:R^d \mapsto \{c_1, c_2, \ldots c_k\}$. The set of all samples forms a point cloud dataset on $d$-dimensional space ( $d=H \times W $  in the case of an image of height $H$ and width $W$). As identified in \cite{naitzat2020topology}, for classification task a non-homeomorphic transfer function is required for each layer as it can change the topology of the point cloud dataset. In order to achieve classification, it is necessary to change the topology from an initial complex topology to a simpler and contractible topology for each class. Another important characteristic of layer transfer function, in a classification network, is that each layer reduces the dimensionality of the input data. This helps the networks to carry forward only the information relevant for classification while discarding all other information.
@@ -134,86 +142,84 @@ We restrict our analysis to the task of supervised classification of  1) 3-dimen
 This study focuses on an important aspect of neural network design -- design of an optimum non-linear activation function for supervised classification tasks. See subsection \ref{sec:design_of_activation_function} for details.
 
 \subsection{Dataset}
-We use two 3-dimensional simulated datasets, nine ring dataset and nine sphere dataset used in \cite{naitzat2020topology}. The  nine ring dataset, as shown in Figure \ref{fig:nine_ring_and_nine_sphere}a,  consists of two classes of data,  colored Green and Red, interlocked together. The nine sphere dataset consists of nine Green spheres and 18 Red Spheres enclosing each other as shown in Figure \ref{fig:nine_ring_and_nine_sphere}b. Both the datasets contain 16000 samples for training and 2000 samples for testing.
 
-\begin{figure}[htp]
+\begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{images/nine_ring_and_nine_sphere.png}
-\caption{3-dimensional synthetic datasets with two different classes(Red and Green) used for training MLP. \\ \footnotesize{Source: https://arxiv.org/abs/2004.06093}}
-    \label{fig:nine_ring_and_nine_sphere}
+\includegraphics[width=0.6\textwidth]{images/catdog.png}
+\caption{Sample images from Cat-Dog dataset}\label{fig:catdog}
 \end{center}
 \end{figure}
+
+
+We use two 3-dimensional simulated datasets, nine ring dataset and nine sphere dataset used in \cite{naitzat2020topology}. The  nine ring dataset, as shown in Figure \ref{fig:nine_ring_and_nine_sphere}a,  consists of two classes of data,  colored Green and Red, interlocked together. The nine sphere dataset consists of nine Green spheres and 18 Red Spheres enclosing each other as shown in Figure \ref{fig:nine_ring_and_nine_sphere}b. Both the datasets contain 16000 samples for training and 2000 samples for testing.
 
 In addition, we also perform experiments and provide results on the following real datasets:
 \begin{enumerate}
 \item Cat-Dog dataset in Kaggle -- The dataset consists of  images of size $32 \times 32$. The dataset is divided into training and testing sets, with 8000 training images and 2000 testing images,  each set with an equal number of images of cats and dogs.
 \item Fashion MNIST -- The dataset consists of 70,000 grayscale images of size $28 \times 28$ with 10 different categories. The dataset is divided into training and testing sets, with 60,000 training images and 10,000 test images.
-\item CIFAR-10 -- The dataset consists of 60,000 colour images of size $32 \times 32$ with 10 different categories. Each category consists of 6000 images. The dataset is divided into training and testing sets, with 50,000 training images and 10,000 test images.
+\item CIFAR-10 -- The dataset consists of 60,000 color images of size $32 \times 32$ with 10 different categories. Each category consists of 6000 images. The dataset is divided into training and testing sets, with 50,000 training images and 10,000 test images.
 \end{enumerate}
 
 Sample images from each of the above datasets are shown in Figures \ref{fig:catdog},  \ref{fig:fashionmnist}  and  \ref{fig:cifar10}. The datasets were converted to gray scale and normalized. No other preprocessing was performed.
 
-\begin{figure}[htp]
+\begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{images/catdog.png}
-\caption{Sample images from Cat-Dog dataset}\label{fig:catdog}
-\end{center}
-\end{figure}
-
-\begin{figure}[htp]
-\begin{center}
-\includegraphics[width=0.8\textwidth]{images/fashionmnist.png}
+\includegraphics[width=0.6\textwidth]{images/fashionmnist.png}
 \caption{Sample images from each of the 10 categories in Fashion MNIST dataset.}\label{fig:fashionmnist}
 \end{center}
 \end{figure}
 
-\begin{figure}[htp]
-\begin{center}
-\includegraphics[width=0.8\textwidth]{images/Cifar10.png}
-\caption{Sample images from CIFAR-10 dataset}\label{fig:cifar10}
-\end{center}
-\end{figure}
 
 \subsection{Layer Transfer Function}
 The layer transfer function is composed of an affine transformation and a non-linear activation function. The generic form of the layer transfer function in MLP and CNN is given in Equations \ref{eq:1} and \ref{eq:2} below.
 
 \begin{equation} \label{eq:1}
-  X^{l + 1} = f(W^TX^{l} + b)
+X^{(l + 1)} = f(W^TX^{(l)} + b)
 \end{equation}
 where:
 \begin{align*}
-X^{l + 1} &= \text{Output of layer $l + 1$ }\\
-X^{l} &= \text{Output of layer $l$} \\
-W &= \text{Weight matrix} \\
-b &= \text{Bias vector and} \\
-f(.) &: \text{Non-linear activation function}\\
+X^{(l + 1)} &= \text{Output of layer $(l + 1)$ }\\
+X^{(l)} &= \text{Output of layer $l$} \\
+W &= \text{Weight matrix connecting nodes between layers $l$ and $(l + 1)$} \\
+b &= \text{Bias vector for layer $l$ and} \\
+f(.) &= \text{Non-linear activation function}\\
 \end{align*}
 
 \begin{equation} \label{eq:2}
-  x_{ij}^{l + 1} = f(\sum_{m,n \in N(i,j)}{w_{mn}x_{mn}^{l} + b)}
+x_{ij}^{(l + 1)} = f(\sum_{m,n \in N(i,j)}{w_{mn}x_{mn}^{(l)} + b)}
 \end{equation}
 where:
 \begin{align*}
-x_{ij}^{l + 1} &= \text{Output value of layer $l + 1$ at pixel location $(i,j)$ }\\
-N(i,j) &= \text{Set of pixels in a square nieghbourhood centered at pixel $(i,j)$.} \\
-w_{mn} &= \text{Convolutional filter weights } \\
+x_{ij}^{(l + 1)} &= \text{Output value of layer $(l + 1)$ at pixel location $(i,j)$ }\\
+N(i,j) &= \text{Set of pixels in a square neighborhood centered at pixel $(i,j)$.} \\
+w_{mn} &= \text{Convolutional filter weight at location $(m,n)$ } \\
 b &= \text{Bias }
 \end{align*}
 
 In the subsections below, we provide the details of desired characteristics for activation function from a topological point of view.
 
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{images/Cifar10.png}
+\caption{Sample images from CIFAR-10 dataset}\label{fig:cifar10}
+\end{center}
+\end{figure}
+
+
 \subsection{Significance of Betti numbers on classification}
-Betti numbers, denoted as $\beta_k(X)$,   are used to quantify the topological complexity of a $d$-dimensional topological space  $X$, where  $0 \leq k \leq d-1$. The  $0^{th}$ Betty number, $\beta_0(X)$, is the number of connected components, the first Betti number, $\beta_1(X)$, is the number of one dimensional holes, the second Betti number, $\beta_2(X)$, is the number of two dimensional holes and so on. Figure \ref{fig:bett_numbers_illustration} shows some topological spaces and their corresponding Betti numbers.
+In order to perform classification task, the network needs to transform the point data cloud into separate disjoint blobs, one for each of the classes. Further, the less the numbers of holes/voids in these resulting blobs, the easier it gets to find a classification mapping function. In the present context, Betti numbers \cite{betti_number} are used to describe the shape of the data distribution.
+
+Betti numbers, denoted as $\beta_k(X)$,   are used to quantify the topological complexity of a $d$-dimensional topological space  $X$, where  $0 \leq k \leq d-1$. Each of these descriptors, $\beta_k(X)$, captures the defining aspect of the shape of the data, $X$, in $k^{th}$ dimension. The  $0^{th}$ Betti number, $\beta_0(X)$, is the number of connected components, the first Betti number, $\beta_1(X)$, is the number of 1D holes, the second Betti number, $\beta_2(X)$, is the number of 2D holes and so on. In general, for $k>0$, $\beta_k(X)$ represents the number of $k$-dimensional holes. Figure \ref{fig:bett_numbers_illustration} shows some well-studied topological spaces and their corresponding Betti numbers \cite{naitzat2020topology}. Hence the Betti descriptors with $N$ disjoint blobs  should be of the form ($N$,0,0,..., 0) as this corresponds to the data shape with $N$ connected components without any holes in any of them. Transforming the point data cloud of samples  to a topological space with the  descriptor, ($N$,0,0,...,0), is the goal of any classification network with $N$ different classes.
 
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{images/bett_numbers_illustration.png}
-\caption{Examples of some complex topological spaces and corresponding Betti numbers.\\ \footnotesize{Source: https://arxiv.org/abs/2004.06093}}
+\caption{Examples of some well studied topological spaces and corresponding Betti numbers.\\ \footnotesize{Source: https://arxiv.org/abs/2004.06093}}
 \label{fig:bett_numbers_illustration}
 \end{center}
 \end{figure}
 
-For efficient classification, one needs to transform the original point data cloud, $X$,  from a high dimensional space with large Betti numbers to a low dimensional latent representation with  $\beta_0(X)$ (number of connected components) equal to the number of classes $K$ and all other Betti numbers to zero. As evident from Figure \ref{fig:topological_simplication_layer_by_layer} , this ensures that each connected component  corresponds to a single class (either Red or Green) and there are no holes within the connected components. Hence  each connected component is contractible  to a single point. It is easy to find a decision boundary if there are no holes on the manifold formed by samples from a  single class.
+For efficient classification, one needs to quickly transform (fewer number epochs) the original point data cloud, $X$,  from a high dimensional space with large Betti numbers to progressively smaller Betti numbers. As evident from Figure \ref{fig:topological_simplication_layer_by_layer}, this ensures that each connected component  corresponds to a single class (either Red or Green) and there are no holes within any of the connected components. Hence  each connected component is contractible to a single point. Hence finding a decision boundary becomes faster if there are no holes on the manifold formed by samples from a single class.
 
 \begin{figure}[htp]
 \begin{center}
@@ -224,21 +230,15 @@ For efficient classification, one needs to transform the original point data clo
 \end{figure}
 
 \subsection{Design of activation function} \label{sec:design_of_activation_function}
-It is observed that non-homeomorphic activation functions like ReLU reduce the Betti numbers faster as opposed to traditional  activation functions like sigmoid and tanh which are  homeomorphic Naitzat et al. (2020). Further, the more the number of discontinuities, the more powerful the activation function will be in terms of reducing the topological complexity. In addition to these findings, we also hypothesize that multiple many-to-one regions in the layer transfer function can reduce the topological complexity  of samples within a single class, as it tries to bring more samples together. As shown in Figure \ref{fig:activation_function_design}, we start with  a portion of a single half cycle of a sine function, and select a cut-off point $x=\frac{3\pi}{4}$. The selected portion of the sine function is repeated to get the final activation function as shown in the last figure in Figure \ref{fig:activation_function_design}.
+It is observed that non-homeomorphic activation functions like ReLU reduce the Betti numbers faster as opposed to traditional  activation functions like sigmoid and tanh which are  homeomorphic Naitzat et al. (2020). Further, the more the number of discontinuities, the more powerful the activation function will be in terms of reducing the topological complexity. In addition to these findings, we also hypothesize that multiple many-to-one regions in the layer transfer function can reduce the Betti descriptors  of samples within a single class, as it tries to bring more samples together hence forming a single blob without holes. As shown in Figure \ref{fig:activation_function_design}, we start with  a positive half cycle of a sine function, and select a cut-off point $x=\frac{3\pi}{4}$ so that the selected interval $[0,\frac{3\pi}{4}]$ has a many-to-one mapping region. The selected portion of the sine function is repeated and superimposed on a linearly increasing function like ReLU to get the final activation function as shown in  Figure \ref{fig:activation_function_design}c.
 
 \begin{figure}[htp]
 \begin{center}
-\includegraphics[width=\textwidth]{images/activation_function_design.png}
-\caption{Steps in design of many-to-one activation functions. We start with a single half cycle of a sinusoidal function an decide a cutoff-point $\frac{3\pi}{4}$ and repeat the function in the interval $[0,\frac{3\pi}{4}]$ to get the final activation function.}
+\includegraphics[width=\textwidth]{images/activation_function_design.pdf}
+\caption{For classification task a many-to-one activation function is required, as it maps samples from a given class to the respective class label. Steps involved in the design of the proposed novel activation function are outlined. We start with a single half cycle of a sinusoidal function and choose a cutoff-point $\frac{3\pi}{4}$ such that the interval $[0,\frac{3\pi}{4}]$ contains many-to-one region. The values of the function in this interval are repeated to get the final activation function.}
 \label{fig:activation_function_design}
 \end{center}
 \end{figure}
-
-The final analytical form of activation function is
-\begin{equation}
-y = ksin(\frac{3\pi}{4})   + sin(x - \frac{3\pi}{4})
-\end{equation}
- where $k=\left \lfloor{\frac{x}{\frac{3\pi}{4}}}\right \rfloor$
 
 \subsection{Neural Network Architecture}
 We performed experiments using MLP  on nine-sphere and nine-rings datasets. For image datasets, we used Convolutional Neural Networks for running the experiments. The MLP for simulated dataset consists of 9 layers with 25 neurons in each layer. We performed experiments with Leaky ReLU and the proposed activation function. Our empirical results show that the proposed activation function results in faster training convergence compared to Leaky ReLU.
@@ -255,7 +255,7 @@ We performed experiments using MLP  on nine-sphere and nine-rings datasets. For 
 \end{figure}
 
 
-Figure \ref{fig:cifar_10_arch} shows  comparison of progression of first Betti numbers (number of connected components) as the data is transformed across layers when Leaky ReLU is is used in all the layers Vs the proposed activation function is used is the final convolutional layer.  It is observed, from Figures \ref{fig:cifar_10_arch},  that with the proposed activation function Betti numbers decrease  by a significantly larger amount than Leaky ReLU activation function. Figure \ref{fig:training_convergence} shows the comparison of convergence  of multi layer perceptron with Leaky ReLU and proposed activation function using nine-sphere and nine-ring datasets. As evident from this figure, the reduction in Betti numbers  directly translates to faster training convergence. The new activation functions with multiple many-to-one regions seem to work well on various datasets and help in achieving at-par or better trainability.
+Figure \ref{fig:cifar_10_arch} shows  comparison of progression of first Betti numbers (number of connected components) as the data is transformed across layers when Leaky ReLU is is used in all the layers Vs the proposed activation function is used is the final convolutional layer.  It is observed, from Figures \ref{fig:cifar_10_arch},  that with the proposed activation function Betti numbers decrease  by a significantly larger amount than Leaky ReLU activation function. Figure \ref{fig:training_convergence} shows the comparison of convergence  of MLP with Leaky ReLU and proposed activation function. Nine-sphere and nine-ring datasets are used for this comparative study. As evident from this figure, the reduction in Betti numbers  directly translates to faster training convergence. The new activation functions with multiple many-to-one regions seem to work well on various datasets and help in achieving at-par or better trainability.
 
 \begin{figure}[htp]
 \begin{center}
@@ -267,11 +267,8 @@ Figure \ref{fig:cifar_10_arch} shows  comparison of progression of first Betti n
 
 Also, The performance impact becomes more pronounced at larger batch-sizes i.e. with larger batch-sizes the gain tends to reach a factor of 2. On increasing the batch size the training for even simpler datasets takes longer (more epochs) for legacy activation functions. Even though the increase in training epochs  is seen for the proposed activation function also, the increase is less pronounced.
 
-We further observed that,  in contrast to legacy activation functions like Leaky ReLU,  the need to adjust learning rate seems to be little.
-
 \section{Conclusion}
-In this work, we look at topological complexity of data at the output of each layer of deep neural network for binary classification tasks. We propose a new activation function that simplifies the topological complexity of point cloud data (measured using Betti numbers)  at each hidden layer which translates to faster training convergence. We evaluate the proposed methods on popular image classification datasets and our results show 1) the proposed activation function results in faster training convergence and 2) removing hidden channels with large Betti numbers does not reduce the test accuracy which indicates that these feature maps are insignificant and can be removed.
-
+In this work, we look at topological complexity of data at the output of each layer of deep neural network for binary classification tasks. We propose a novel activation function that simplifies the topological complexity of point cloud data (measured using Betti numbers)  at each hidden layer which translates to faster training convergence. We evaluate the proposed methods on popular image classification datasets and our results show that the proposed activation function results in faster training convergence. It is observed that the  Betti numbers of point topological space formed by samples from each class reduces drastically with the proposed activation function.
 %\acks{Acknowledgements should go at the end, before appendices and references. You can uncomment this for the camera-ready version on paper acceptance.}
 
 %\bibliographystyle{plain}
@@ -289,3 +286,4 @@ In this work, we look at topological complexity of data at the output of each la
 
 
 \end{document}
+
